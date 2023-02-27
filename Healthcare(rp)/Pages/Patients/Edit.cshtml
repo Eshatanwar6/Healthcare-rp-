@@ -1,0 +1,88 @@
+﻿@page
+@model Healthcare_rp_.Pages.Patients.EditModel
+@{
+}
+<br />
+<h2>
+	Edit patient
+</h2>
+@if (Model.errorMessage.Length > 0)
+{
+	<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+		<strong>@Model.errorMessage</strong>
+
+		<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+	</div>
+}
+<form method="POST">
+	<input type = "hidden" name="Patientid" value="@Model.patientInfo.Patientid">
+		<div class = "row mb-3">
+	<label class ="col-sm-3" col-form-label">FirstName</label>
+		<div class = "col-sm-6">
+	        <input type ="text" class ="form_ control" name ="FirstName" value="@Model.patientInfo.FirstName">
+			
+	  	</div>
+	</div>
+
+		 <div class="row mb-3">
+			<label class="col-sm-3" col-form-label">LastName</label>
+			<div class="col-sm-6">
+				<input type="text" class="form_ control" name="Lastname" value="@Model.patientInfo.LastName">
+			</div>
+			</div>
+			<div class="row mb-3">
+				<label class="col-sm-3" col-form-label">Address</label>
+				<div class="col-sm-6">
+					<input type="text" class="form_ control" name="Address" value="@Model.patientInfo.Address">
+				</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-sm-3" col-form-label">City</label>
+					<div class="col-sm-6">
+						<input type="text" class="form_ control" name="City" value="@Model.patientInfo.City">
+					</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-3" col-form-label">State</label>
+						<div class="col-sm-6">
+							<input type="text" class="form_ control" name="State" value="@Model.patientInfo.State">
+						</div>
+						</div>
+						<div class="row mb-3">
+							<label class="col-sm-3" col-form-label">Country</label>
+							<div class="col-sm-6">
+								<input type="text" class="form_ control" name="Country" value="@Model.patientInfo.Country">
+							</div>
+							<div class="row mb-3">
+								<label class="col-sm-3" col-form-label">Pincode</label>
+								<div class="col-sm-6">
+									<input type="text" class="form_ control" name="PinCode" value="@Model.patientInfo.PinCode">
+								</div>
+							</div>
+							@if (Model.successMessage.Length > 0)
+							{
+
+								<div class="row mb-3"></div>
+								<div class="col-sm-9">
+
+
+
+									<div class='alert alert-success alert-dismissible fade show' role='alert'>
+										<strong>@Model.successMessage</strong>
+
+										<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+									</div>
+
+								</div>
+							}
+							<div class="row mb-3">
+								<div class="offset-sm-3" col-sm-3 d-grid">
+
+									<button type="submit" class="btn-primary">Submit</button>
+								</div>
+								<div class="col-sm-3 d-grid">
+
+									<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+								</div>
+							</div>
+</form>

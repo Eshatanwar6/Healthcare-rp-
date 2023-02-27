@@ -1,0 +1,45 @@
+﻿@page
+@model Healthcare_rp_.Pages.Patients.IndexModel
+@{
+}
+<br>
+<h2> List  of Patients </h2>
+<a class='btn btn-primary btn-sm'href='/Patients/Create'>New Patient</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Patient Id</th>
+
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Country</th>
+			<th>Pincode</th>
+
+		</tr>
+
+	</thead>
+	<tbody>
+		@foreach(var item in Model.patientList)
+		{
+			<tr>
+				<td>@item.Patientid</td>
+				<td>@item.FirstName</td>
+				<td>@item.LastName</td>
+				<td>@item.Address</td>
+				<td>@item.City</td>
+				<td>@item.State</td>
+				<td>@item.Country</td>
+				<td>@item.PinCode</td>
+				<td>
+					<a class="btn btn-primary btn-sm"  href="/Patients/Edit?Patientid=@item.Patientid">Edit</a>
+					<a class="btn btn-primary btn-sm" href="/Patients/Delete?Patientid=@item.Patientid">Delete</a>
+				</td>
+			</tr>
+			
+		}
+	</tbody>
+
+</table>
