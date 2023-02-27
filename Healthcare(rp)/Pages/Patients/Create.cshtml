@@ -4,7 +4,7 @@
 }
 <br />
 <h2>
-	New Patient
+	New patient detail
 </h2>
 @if (Model.errorMessage.Length > 0)
 {
@@ -15,11 +15,11 @@
 	</div>
 }
 <form method="POST">
-	<div class = "row mb-3">
-	<label class ="col-sm-3" col-form-label">FirstName</label>
-		<div class = "col-sm-6">
-			<input type ="text" class ="form_ control"name ="FirstName" value="@Model.patientInfo.FirstName">
-			</div>
+	<div class="row mb-3">
+		<label class="col-sm-3" col-form-label">FirstName</label>
+		<div class="col-sm-6">
+			<input type="text" class="form_ control" name="FirstName" value="@Model.patientInfo.FirstName">
+		</div>
 		<div class="row mb-3">
 			<label class="col-sm-3" col-form-label">LastName</label>
 			<div class="col-sm-6">
@@ -40,17 +40,17 @@
 						<div class="col-sm-6">
 							<input type="text" class="form_ control" name="State" value="@Model.patientInfo.State">
 						</div>
-							<div class="row mb-3">
-						<label class="col-sm-3" col-form-label">Country</label>
-						<div class="col-sm-6">
-							<input type="text" class="form_ control" name="Country" value="@Model.patientInfo.Country">
-						</div>
+						<div class="row mb-3">
+							<label class="col-sm-3" col-form-label">Country</label>
+							<div class="col-sm-6">
+								<input type="text" class="form_ control" name="Country" value="@Model.patientInfo.Country">
+							</div>
 							<div class="row mb-3">
 								<label class="col-sm-3" col-form-label">Pincode</label>
 								<div class="col-sm-6">
 									<input type="text" class="form_ control" name="PinCode" value="@Model.patientInfo.PinCode">
 								</div>
-								</div>
+							</div>
 							@if (Model.successMessage.Length > 0)
 							{
 
